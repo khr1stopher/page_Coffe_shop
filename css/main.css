@@ -1,0 +1,150 @@
+
+/* js */
+.circulo{
+	display: none;
+}
+/* js */
+body{
+	margin: 0;
+	padding: 0;
+}
+
+/*nav-bar*/
+nav{
+	background: transparent;
+}
+nav div.container a:nth-child(1){
+	letter-spacing: 2px;
+	font-weight: 100;
+	font-family: 'Pacifico', cursive;
+}
+.navbar-brand{
+	font-style: italic;
+}
+.navbar-toggler-icon{
+
+}
+/*nav-bar*/
+/*header*/
+header{
+	min-height: 400px;
+	max-height: 900px;
+	background: url('../img/02.jpg') center;
+	background-size: cover;
+}
+header .circulo{
+	position: absolute;
+	top: 0;
+	left: calc(50% - 25px);
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: #ffffff;
+	transition: .5s;
+	box-sizing: border-box;
+}
+header .circulo svg{
+	position: absolute;
+	height: 100%;
+	padding: 10px;
+	width: 100%;
+}
+header .sombra{
+	display: flex;
+	height: 100%;
+	width: 100%;
+	background: rgba(0,0,0,.5);
+	align-items: center;
+}
+header .sombra .container{
+	
+}
+header .sombra .container img{
+	padding: 50px;
+	/*transform-style: preserve-3d;
+	transform: perspective(1000px);
+	transform: translateZ(20px);*/
+}
+/*header*/
+/*about*/
+.about .container h1{
+	margin-bottom: 15px;
+}
+.about .container .row .col img{
+	width: 100%;
+	border-radius: 50%;
+}
+/*about*/
+/*stadistic*/
+.stadistics{
+	background: url(../img/02.jpg) fixed;
+	background-size: cover;
+}
+.stadistics .bronw{
+	background: rgba(0,0,0,.5);
+}
+.stadistics .bronw .container{
+	
+}
+.stadistics .bronw .container .row{
+
+}
+.stadistics .bronw .container .row{
+
+}
+.stadistics .bronw .container .row .col img{
+	max-width: 50px
+}
+.stadistics .bronw .container .row .col svg{
+	width: 5em;
+	height: 5em;
+}
+.stadistics .bronw .container .row .col *{
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+	color: #f5f5f5;
+}
+.stadistics .bronw .container .row .col .num{
+	font-size: 37px;
+	font-weight: 500;
+	line-height: 39px;
+	letter-spacing: 0.147em;
+}
+/*stadistic*/
+/*Galery*/
+.galery{}
+.galery h1{}
+.galery p.text-center {
+	padding: 0 150px;
+}
+.galery .container .grid{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+.galery .container .grid .img:nth-child(1){
+	background: url(../img/11.jpg);
+	background-size: cover;
+}
+.galery .container .grid .img:nth-child(2){
+	background: url(../img/09.jpg);
+	background-size: cover;
+}
+.galery .container .grid .img:nth-child(3){
+	background: url(../img/12.jpg);
+	background-size: cover;
+}
+.galery .container .grid .img{
+	width: 100%;
+	min-height: 600px;
+}
+
+/*Galery*/
+/*footer*/
+footer{
+	color: #f5f5f5;
+}
+footer a{
+	color: #00ffe7;
+}
+/*footer*/
