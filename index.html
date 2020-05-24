@@ -14,23 +14,44 @@
 	<title>coffe store</title>
 
 	<!-- scripts -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/jq.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+	<script>
+		$(window).on('scroll',() => {
+			var medida = $(window).scrollTop()
+			if (medida >= 200) {
+				$('nav').addClass('bg-dark');
+			} else {
+				$('nav').removeClass('bg-dark');
+			}
+		});
+	</script>
 </head>
 <body>
 	<!-- nav-bar -->
 	<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
 	  <div class="container">
-	  	<a class="navbar-brand" href="#">Coffe</a>
+	  	<a class="navbar-brand" href="#">Coffe <svg class="bi bi-cup" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M12 4H4v8a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4zM3 3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V3H3z"/>
+  <path fill-rule="evenodd" d="M14.5 5.5h-2v-1h2A1.5 1.5 0 0 1 16 6v4a1.5 1.5 0 0 1-1.5 1.5h-2v-1h2a.5.5 0 0 0 .5-.5V6a.5.5 0 0 0-.5-.5z"/>
+</svg></a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
 		  </button>
 		  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 		    <div class="navbar-nav ml-auto">
-		      <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-		      <a class="nav-item nav-link" href="#about">About</a>
-		      <a class="nav-item nav-link" href="#contact">Contact</a>
+		      <a class="nav-item nav-link active" href="#"><svg class="bi bi-house-door" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M7.646 1.146a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5H9.5a.5.5 0 0 1-.5-.5v-4H7v4a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6zM2.5 7.707V14H6v-4a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4h3.5V7.707L8 2.207l-5.5 5.5z"/>
+  <path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+</svg> Home <span class="sr-only">(current)</span></a>
+		      <a class="nav-item nav-link" href="#about"><svg class="bi bi-person" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M13 14s1 0 1-1-1-4-6-4-6 3-6 4 1 1 1 1h10zm-9.995-.944v-.002.002zM3.022 13h9.956a.274.274 0 0 0 .014-.002l.008-.002c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664a1.05 1.05 0 0 0 .022.004zm9.974.056v-.002.002zM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+</svg> About</a>
+		      <a class="nav-item nav-link" href="#contact"><svg class="bi bi-card-text" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M14.5 3h-13a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+  <path fill-rule="evenodd" d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 8a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 8zm0 2.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5z"/>
+</svg> Contact</a>
 		    </div>
 		  </div>
 	  </div>
@@ -117,7 +138,11 @@
 	<!-- statcs -->
 	<!-- Galery -->
 	<div class="galery p-5">
-		<h1 class="text-center m-2">our work</h1>
+		<h1 class="text-center m-2">
+			<svg class="bi bi-archive" width="0.5em" height="0.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M2 5v7.5c0 .864.642 1.5 1.357 1.5h9.286c.715 0 1.357-.636 1.357-1.5V5h1v7.5c0 1.345-1.021 2.5-2.357 2.5H3.357C2.021 15 1 13.845 1 12.5V5h1z"/>
+  <path fill-rule="evenodd" d="M5.5 7.5A.5.5 0 0 1 6 7h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1-.5-.5zM15 2H1v2h14V2zM1 1a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H1z"/>
+</svg> our work</h1>
 		<p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis praesentium eligendi laborum odio iste culpa dignissimos, ipsam necessitatibus explicabo nostrum quod non soluta, accusantium earum.</p>
 		<div class="container">
 			<div class="grid">
@@ -132,12 +157,23 @@
 	<div class="ubicasion">
 		<div class="container">
 			<div class="container ml-5">
-				<h1>Location</h1>
+				<h1>Location <span><svg class="bi bi-map" width="0.5em" height="0.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M15.817.613A.5.5 0 0 1 16 1v13a.5.5 0 0 1-.402.49l-5 1a.502.502 0 0 1-.196 0L5.5 14.51l-4.902.98A.5.5 0 0 1 0 15V2a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0l4.902.98 4.902-.98a.5.5 0 0 1 .415.103zM10 2.41l-4-.8v11.98l4 .8V2.41zm1 11.98l4-.8V1.61l-4 .8v11.98zm-6-.8V1.61l-4 .8v11.98l4-.8z"/>
+</svg> </span></h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, doloremque!</p>
 			</div>
-		
-			<div style="width: 100%">
-				<iframe width="100%" height="600" src="https://maps.google.com/maps?width=100%&height=600&hl=es&q=Mandela%20Parkway%2C%20Oakland%2C%20California%2C%20EE.%20UU.+(Mi%20nombre%20de%20egocios)&ie=UTF8&t=&z=21&iwloc=B&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.mapsdirections.info/marcar-radio-circulo-mapa/">Radio en el mapa</a></iframe></div><br />
+			<div class="row">
+				<div width="50%" class="col">
+					<iframe width="100%" height="600" src="https://maps.google.com/maps?width=100%&height=600&hl=es&q=Mandela%20Parkway%2C%20Oakland%2C%20California%2C%20EE.%20UU.+(Mi%20nombre%20de%20egocios)&ie=UTF8&t=&z=21&iwloc=B&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.mapsdirections.info/marcar-radio-circulo-mapa/">Radio en el mapa</a></iframe>
+				</div>
+				<div class="col" width="50%" height="600" style="display: flex;align-items: center;">
+					<div class="content" style="padding: 75px;">
+						<h1>Lorem ipsum dolor sit amet.</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium provident error aliquam labore eum illum est perferendis ipsum sunt, doloribus ratione iure, dolores obcaecati dolor sapiente necessitatibus at rerum quos.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium provident error aliquam labore eum illum est perferendis ipsum sunt, doloribus ratione iure, dolores obcaecati dolor sapiente necessitatibus at rerum quos.</p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<!-- Location -->
@@ -146,7 +182,7 @@
     	<a href="#"> Khristopher </a>
   	</footer>
 	<!-- footer -->
-<script src="js/app.js" ></script>
+
 
 <!-- frameworks -->
 <script src="js/vanilla-tilt.min.js"></script>
@@ -162,5 +198,7 @@
 <script src="js/jquery-3.3.1.slim.min.js"></script>
 <script src="js/P.min.js"></script>
 <script src="js/B.min.js"></script>
+
+<script src="js/app.js" ></script>
 </body>
 </html>
