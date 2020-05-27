@@ -16,7 +16,6 @@ window.onload = (event) => {
 
 window.addEventListener('resize', () => { 
 	circle.style.top = `calc(${header.offsetHeight}px - 25px)`
-	img_3.style.top = `calc(${container_1.offsetTop}px)`;
 });
 
 circle.style.top = `calc(${header.offsetHeight}px - 25px)`;

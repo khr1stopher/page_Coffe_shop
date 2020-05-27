@@ -1,4 +1,6 @@
+*{
 
+}
 /* js */
 .circulo{
 	display: none;
@@ -168,6 +170,11 @@ header .sombra .container img{
 }
 
 /*Galery*/
+/*Ubicasion*/
+.ubicasion{
+	margin-bottom: 40px;
+}
+/*Ubicasion*/
 /*footer*/
 
 footer{
@@ -195,6 +202,9 @@ footer .row .col ul h6{
 	cursor: pointer;
 	margin-bottom:5px;
 	font-size: 0.9rem
+}
+footer .row .col ul h6 a{
+	color: #f5f5f5;
 }
 footer a{
 	color: #00ffe7;
